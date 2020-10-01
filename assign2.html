@@ -1,0 +1,71 @@
+<html>
+
+<head>
+<title>
+		Play with Computer!
+		</title>
+		<link rel="stylesheet" type="text/css" href="game.css">
+		<script src= "game.js"> </script>
+		
+		<script language ="javascript">
+		
+		var name = window.prompt("Please Enter Your Name: ");
+		
+		document.write( "<h1>Hey "+ name + "!  Welcome to the Rock Paper Scissors game." + "</h1>");
+		</script>
+  <style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<table style="width:30%">
+  <tr>
+    <th>Your selections:</th>
+    <th>  </th> 
+    <th>Computer</th>
+  </tr>
+  <tr>
+    <td>
+	<form>
+  <input type="radio" id="rock" name="choice" value="rock" onclick="rockSelect()">
+  <label for="rock">Rock</label><br>
+  <input type="radio" id="paper" name="choice" value="paper" onclick="paperSelect()">
+  <label for="paper">Paper</label><br>
+  <input type="radio" id="scissors" name="choice" value="scissors" onclick="scissorsSelect()">
+  <label for="scissors">Scissors</label></td>
+    <td> <input type="button" value= "Go!" onclick="selection()"> </td>
+	</form>
+	
+    <td><a id="randomChoice"></a></td>
+  </tr>
+  <tr>
+    <td>You selected:</td>
+    <td colspan= "2" id="playerC"></td>
+  </tr>
+  <tr>
+    <td>Computer randomly generated: </td> 
+    <td colspan= "2" id="randomChoice1"></td>
+  </tr>
+</table>
+<p>You have played <a id="playC"></a> times.</p>
+<p>CPU History: </p>
+<table>
+    <tr>
+        <td>Rock</td>
+        <td>Paper</td>
+        <td>Scissors</td>
+    </tr>
+        <td> <a id="rockC"></a> </td>
+        <td> <a id="paperC"></a> </td>
+        <td> <a id="scissorsC"></a> </td>
+</table>
+<p>Wins: <a id="numWins"></a> </p>
+<p>Loss: <a id="numLoss"></a> </p> 
+<p>Ties: <a id="numTies"></a> </p> 
+		
+</body>
+</html>
+
